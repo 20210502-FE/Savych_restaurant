@@ -1,6 +1,8 @@
 @import "utility/variables";
 @import "utility/mixins";
 @import "fonts";
+@import "../assets/fonts/fontawesome/scss/fontawesome";
+@import "../assets/fonts/fontawesome/scss/solid";
 
 @import "base/base";
 @import "base/layout";
@@ -8,3 +10,6 @@
 @import "modules/header";
 @import "modules/banner";
 @import "modules/navigation";
+@import "modules/search";
+@import "modules/top-restaurant";
+@import "modules/explore";

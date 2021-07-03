@@ -1,0 +1,38 @@
+.search {
+  max-width: 462px;
+  position: relative;
+  z-index: 1;
+
+  &__input {
+    padding: 36px 160px 36px 30px;
+    border: none;
+    background-color: $color-white;
+    width: 100%;
+
+    &::placeholder {
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      color: $color-jacarta;
+      opacity: 0.6;
+    }
+  }
+
+  &__button {
+    background-color: $color-red;
+    color: $color-white;
+    border-top-left-radius: 60px;
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 146px;
+    padding: 21px 0;
+    border: none;
+    font-family: $font-semi-bold, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}

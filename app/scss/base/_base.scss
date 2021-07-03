@@ -40,7 +40,65 @@ img {
   }
 }
 
-.text {
-  font-size: 30px;
-  color: $color-grey;
+.main-heading {
+  font-family: $font-bolder, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+  text-transform: capitalize;
+  color: $color-jacarta;
+  opacity: 0.05;
+}
+
+.heading {
+  font-family: $font-regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color-jacarta;
+
+  &_bold {
+    font-family: $font-bold, sans-serif;
+    font-weight: 700;
+  }
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  @include respond-to(phone-only) {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.line {
+  background-color: $color-red;
+  height: 25px;
+  position: absolute;
+
+  @include respond-to(phone-only) {
+    height: 12px;
+  }
+
+  &_horizontal {
+    width: 230px;
+    height: 15px;
+
+    @include respond-to(phone-only) {
+      width: 150px;
+    }
+  }
+
+  &_vertical {
+    height: 140px;
+    width: 25px;
+
+    @include respond-to(phone-only) {
+      width: 12px;
+      height: 100px;
+    }
+  }
 }
