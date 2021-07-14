@@ -1,0 +1,64 @@
+.search {
+  max-width: 462px;
+  position: relative;
+  z-index: 1;
+
+  &_small {
+    max-width: 273px;
+  }
+
+  &__input {
+    padding: 36px 160px 36px 30px;
+    border: none;
+    background-color: $color-white;
+    width: 100%;
+
+    &::placeholder {
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      color: $color-jacarta;
+      opacity: 0.6;
+    }
+
+    &_small {
+      @include respond-to(phone-only) {
+        padding: 16px 100px 20px 11px;
+      }
+    }
+
+    &_has-shadow {
+      box-shadow: 2px 2px 30px 2px #FFF5EC;
+    }
+  }
+
+  &__button {
+    background-color: $color-red;
+    color: $color-white;
+    border-top-left-radius: 60px;
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 146px;
+    padding: 21px 0;
+    border: none;
+    font-family: $font-semi-bold, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &_no-border-radius {
+      border-top-left-radius: 0;
+    }
+
+    &_small {
+      width: 80px;
+      padding: 9px 0;
+      font-size: 24px;
+      top: 5px;
+      right: 6px;
+    }
+  }
+}

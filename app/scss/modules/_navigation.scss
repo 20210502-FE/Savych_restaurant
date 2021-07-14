@@ -76,12 +76,18 @@
       line-height: 24px;
       text-align: center;
       color: $color-jacarta;
-      @extend .text;
+      transition: color .3s ease-in;
 
-      //@include respond-to(phone-only) {
-      //  color: $color-white;
-      //  text-align: right;
-      //}
+      @include respond-to(phone-only) {
+        color: $color-white;
+        text-align: right;
+      }
+
+      &:hover {
+        @include respond-to(phone-only) {
+          color: $color-jacarta;
+        }
+      }
     }
   }
 
