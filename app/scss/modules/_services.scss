@@ -1,0 +1,98 @@
+.services {
+  padding-top: 60px;
+  background: $color-seashell-peach;
+
+  &__head {
+    padding-left: 31px;
+  }
+
+  &__heading {
+    padding-top: 27px;
+    margin-bottom: 14px;
+  }
+
+  &_desc {
+
+  }
+
+  &__wrapper {
+
+  }
+
+  &__column {
+    flex: 1;
+    padding: 15px 0;
+
+    &_card {
+
+    }
+  }
+
+  &__delivery {
+    background-color: $color-peach-cream;
+    width: 462px;
+    padding: 105px 109px;
+    text-transform: capitalize;
+  }
+
+  &__title {
+    font-family: $font-medium;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-jacarta;
+
+    &_with-line {
+      position: relative;
+
+      &:before, &:after {
+        position: absolute;
+      }
+
+      &:before {
+        content: url("../assets/images/arrow-small.png");
+        left: -121px;
+      }
+
+      &:after {
+        content: '';
+        width: 84px;
+        height: 3px;
+        background-color: $color-red;
+        top: 0;
+        right: -96px;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    &_with-line-reverse {
+      padding-left: 114px;
+
+      &:before {
+        left: unset;
+        right: -123px;
+        transform: rotate(180deg);
+      }
+
+      &:after {
+        right: unset;
+        left: 0;
+      }
+    }
+  }
+
+  &__row {
+    &:first-child {
+      @include respond-to(phone-only) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-image {
+      background-color: $color-peach-cream;
+      width: 271px;
+      height: 275px;
+    }
+  }
+}

@@ -63,6 +63,19 @@ img {
     font-family: $font-bold, sans-serif;
     font-weight: 700;
   }
+
+  &_color-white {
+    color: $color-white;
+  }
+}
+
+.text {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-grey;
 }
 
 .wrapper {
@@ -73,6 +86,7 @@ img {
     max-width: calc(100% - 40px);
   }
 }
+
 
 .line {
   background-color: $color-red;
@@ -86,6 +100,10 @@ img {
   &_horizontal {
     width: 230px;
     height: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 
     @include respond-to(phone-only) {
       width: 150px;

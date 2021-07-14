@@ -1,0 +1,116 @@
+.booking {
+  background-color: $color-peach-cream;
+  padding: 83px 96px 85px 0;
+  position: relative;
+  height: 502px;
+
+  &__content {
+    background-color: $color-white;
+    padding: 19px 27px 38px 0;
+    position: relative;
+
+    &-image {
+      position: absolute;
+      top: -59px;
+      right: -61px;
+
+      &_line {
+        top: unset;
+        bottom: -61px;
+        left: 0;
+        right: unset;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include respond-to(phone-only) {
+      max-width: 291px;
+    }
+  }
+
+  &__label {
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: $color-jacarta;
+    padding-right: 15px;
+    position: relative;
+    margin-bottom: 9px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      border-top: 10px solid $color-red;
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    &_big {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &_small {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__heading {
+    font-family: $font-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-jacarta;
+    padding-top: 30px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  &__search {
+    margin-bottom: 70px;
+  }
+
+  &__additional-param {
+    padding: 0 10px;
+  }
+
+  &__input {
+    max-width: 71px;
+    border: none;
+    margin-top: 9px;
+
+    &::placeholder {
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 30px;
+      color: $color-jacarta;
+      opacity: 0.6;
+    }
+
+    &_big {
+      max-width: 95px;
+    }
+
+    &_smal {
+      max-width: 65px;
+    }
+  }
+
+  &__additional-params {
+
+  }
+}

@@ -20,28 +20,83 @@
     font-size: 14px;
     line-height: 24px;
     color: $color-grey;
-    margin-bottom: 47px;
+    margin-bottom: 30px;
   }
 
   &__content {
     @include respond-to(phone-only) {
       max-width: calc(100% - 40px);
       margin: 0 auto;
+      justify-content: center;
     }
   }
 
   &__column {
     padding: 15px 20px;
   }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-red;
+    position: relative;
+    padding-left: 12px;
+    //margin-bottom: 17px;
+
+    &:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid $color-white;
+      border-bottom: 2px solid $color-white;
+      border-radius: 1px;
+      transform: rotate(-45deg);
+    }
+
+    &:before {
+      content: '';
+      width: 58px;
+      height: 3px;
+      background-color: $color-red;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -58px;
+      margin: auto;
+    }
+
+    &-wrapper {
+      margin-top: 39px;
+      padding-left: 58px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    &-text {
+      font-family: $font-regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $color-red;
+      position: absolute;
+      bottom: 0;
+      right: -15px;
+    }
+  }
 }
 
 .top-product {
   border-radius: 20px;
+  min-width: 474px;
   width: 494px;
   height: 493px;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 
-  & > picture {
+  &__picture {
     position: absolute;
     top: 0;
     left: 0;
@@ -57,4 +112,101 @@
   @include respond-to(phone-only) {
     width: 100%;
   }
+
+  &:hover {
+    .top-product__caption {
+      opacity: 1;
+    }
+  }
+
+  &__caption {
+    background-color: rgba(254, 4, 60, .7);
+    border-radius: 0 0 20px 20px;
+    padding: 15px 0 15px 30px; //TODO fix padding and elements according to the design
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    line-height: 24px;
+    color: $color-white;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+  }
+
+  &__title {
+    font-family: $font-bold;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  &__text {
+    font-family: $font-regular;
+    font-size: 14px;
+    max-width: 300px;
+
+    &-bottom {
+      @extend .top-product__text;
+      margin-left: 42px;
+      margin-top: 20px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: -1px;
+    bottom: 28.25px;
+    width: 159.78px;
+    padding: 15px 0;
+    text-align: center;
+    line-height: 1;
+    background-color: $color-white;
+    border-radius: 100px 0 0 100px;
+    font-family: $font-regular;
+    font-size: 16px;
+    color: $color-red;
+    border: none;
+  }
 }
+
+//.image-wrapper {
+//  position: relative;
+//  max-width: 475px;
+//  width: 100%;
+//
+//  &:before {
+//    content: '';
+//    position: absolute;
+//    top: 0;
+//    bottom: 0;
+//    left: -15%;
+//    margin: auto;
+//    width: 40%;
+//    height: 40%;
+//    border: 20px solid red;
+//  }
+//}
+
+//.title {
+//  font-family: $font-bold;
+//  font-weight: bold;
+//  font-size: 36px;
+//  line-height: 48px;
+//  text-align: center;
+//  text-transform: uppercase;
+//  color: #000000;
+//  margin: 0 auto;
+//  position: relative;
+//  padding-bottom: 10px;
+//
+//  &:after {
+//    content: '';
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//    right: 0;
+//    margin: auto;
+//    width: 60.91px;
+//    height: 5px;
+//    background-color: #E8C300;
+//    border-radius: 5px;
+//  }
+//}
